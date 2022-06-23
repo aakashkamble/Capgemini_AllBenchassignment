@@ -1,0 +1,99 @@
+package Exception;
+
+class IllegalBankTransactionException extends Exception
+{
+	public  IllegalBankTransactionException(String s)
+	{
+		super(s);
+	}
+
+}
+
+
+package Exception;
+
+public class InsufficientBalanceException extends Exception{
+	public  InsufficientBalanceException(String msg)
+	{
+		super(msg);
+	}
+
+}
+
+
+package Exception;
+
+import java.util.Scanner;
+
+public class Question {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int c=a/b;
+	System.out.println("Exception is not thrown");
+}
+}
+
+
+package Exception;
+
+import java.util.Scanner;
+
+public class Question2 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	try {
+	throw  new UnsupportedOperationException("Invalid numbers");
+	}
+	catch(UnsupportedOperationException e) {
+		System.out.println(e.getMessage());
+	}
+}
+}
+
+
+package Exception;
+public class SavingAccount {
+	public void withdraw(int a) throws IllegalBankTransactionException, InsufficientBalanceException
+	{
+		int balance=100000;
+		if(a>balance)
+		{
+			throw new InsufficientBalanceException("Insufficient Balance");
+		}
+		else if(a<0) {
+			throw new IllegalBankTransactionException("Dont give the input as negative");
+		}
+		
+	}
+	public static void main(String[] args) {
+		SavingAccount s1=new SavingAccount();
+		try {
+		s1.withdraw(-299);}
+		catch(InsufficientBalanceException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		catch(IllegalBankTransactionException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}
+
+
+package Exception;
+
+public class UnsupportedOperationException extends Exception {
+	public UnsupportedOperationException(String msg)
+	{
+		super(msg);
+	}
+
+}
+

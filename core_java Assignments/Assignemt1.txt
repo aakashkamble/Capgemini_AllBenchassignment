@@ -1,0 +1,223 @@
+package Assignemen;
+
+import java.util.Scanner;
+
+
+
+public class Amstrong {
+	public static void main(String[] args)
+	{
+
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int temp = n;
+		int p = 0;
+
+		while (n > 0) {
+
+			int rem = n % 10;
+			p = (p) + (rem * rem * rem);
+			n = n / 10;
+		}
+
+		
+		if (temp == p) {
+			System.out.println("Yes. It is Armstrong No.");
+		}
+		else {
+			System.out.println(
+				"No. It is not an Armstrong No.");
+		}
+	}
+}
+
+
+
+package Assignemen;
+
+public class Amstrongrange
+{
+    public static void main(String[] args) 
+     {
+        int n, count = 0, a, b, c, sum = 0;
+        System.out.print("Armstrong numbers from 1 to 1000:");
+        for(int i = 1; i <= 1000; i++)
+        {
+            n = i;
+            while(n > 0)
+            {
+                b = n % 10;
+                sum = sum + (b * b * b);
+                n = n / 10;
+            }
+            if(sum == i)
+            {
+                System.out.print(i+" ");
+            }
+            sum = 0;
+        }
+    }
+}
+
+package Assignemen;
+
+import java.util.Scanner;
+
+public class Arraysearch {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int[] arr= {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47};
+		System.out.println("Enter the number you want to search");
+		int num=sc.nextInt();
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]==num)
+			{
+				System.out.println("The number is there in the array");
+				break;
+			}
+		    if(i==arr.length-1) {
+		    	System.out.println("The number is not in the array");
+		    }
+		}
+	}
+
+}
+
+package Assignemen;
+
+public class Bubblesort {
+	public static void main(String[] args) {
+		int[] arr= {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47};
+		for(int i=0;i<arr.length-1;i++)
+		{
+			for(int j=0;j<arr.length-1;j++) 
+			{
+				if(arr[j+1]>arr[j])
+				{
+					int temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+		for(int k=0;k<arr.length;k++)
+		{
+			System.out.print(arr[k]+" ");
+		}
+	}
+
+}
+
+package Assignemen;
+
+import java.util.Scanner;
+
+public class Examresult {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int c=sc.nextInt();
+	if(a>60 && b>60 && c>60)
+	{
+		System.out.println("You successfully passed the exam");
+	}
+	else if((a>60 && b>60)||(b>60 && c>60)||(c>60 && a>60))
+	{
+		System.out.println("You have been promoted successfully");
+	}
+	else if(a>60||b>60||c>60)
+	{
+		System.out.println("You have been failed in the exam");
+	}
+	else {
+		System.out.println("You havae been failed in the exam");
+	}
+}
+
+}
+
+package Assignemen;
+
+import java.util.Scanner;
+
+public class Income {
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	double a=sc.nextDouble();
+	if(a>0 && a<+180000) {
+		System.out.println("You no need to pay the tax");
+	}
+	else if(a>181000 && a<300000) {
+		double d=0.1*a;
+		System.out.println("You have to pay "+d);
+	}
+	else if(a>300000 && a<500000) {
+		double d=0.2*a;
+		System.out.println("You have to pay "+d);
+	}
+	else if(a>500000 && a<=1000000) {
+		double d=0.3*a;
+		System.out.println("You have to pay "+d);
+	}
+	
+	}
+
+}
+
+
+package Assignemen;
+
+import java.util.Scanner;
+
+public class Intrest {
+	public static int simpleIntrest(int p,int r,int t)
+	{
+		int a=(p*t*r)/100;
+		return a;
+	}
+	public static double compoundIntrest(int p,int r,int t) {
+		 double result = (p*Math.pow((1+r),t))-p;
+		 return result;
+
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		System.out.println(simpleIntrest(a, b, c));
+		System.out.println(compoundIntrest(a, b, c));
+		
+	}
+
+}
+
+package Assignemen;
+
+import java.util.Scanner;
+
+public class Student {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+			System.out.println("Enter student a marks in all the subjects");
+			int a=sc.nextInt();
+			int b=sc.nextInt();
+			int c=sc.nextInt();
+		    System.out.println("The average score of a student is "+(a+b+c)/3 );
+		    System.out.println("Enter student b marks in all the subjects");
+			int d=sc.nextInt();
+			int e=sc.nextInt();
+			int f=sc.nextInt();
+		    System.out.println("The average score of b student is "+(d+e+f)/3 );
+		    System.out.println("Enter student c marks in all the subjects");
+			int g=sc.nextInt();
+			int h=sc.nextInt();
+			int i=sc.nextInt();
+		    System.out.println("The average score of c student is "+(g+h+i)/3 );
+		    System.out.println("The average in the first subject is "+(a+d+g)/3);
+		    System.out.println("The average in the second subject is "+(b+e+h)/3);
+		    System.out.println("The average in the third subject is "+(c+f+i)/3);
+	}
+
+}

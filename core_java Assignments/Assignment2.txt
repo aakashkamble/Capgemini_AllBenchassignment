@@ -1,0 +1,194 @@
+package Assignmene;
+
+ abstract class Bank {
+   public abstract int balance();
+}
+ class Savings extends Bank
+{
+
+	@Override
+	public int balance() {
+		// TODO Auto-generated method stub
+		return 10000;
+	}
+	
+}
+ class Current extends Bank
+{
+
+	@Override
+	public int balance() {
+		// TODO Auto-generated method stub
+		return -2000;
+	}
+	
+}
+public class Account
+{
+	public static void main(String[] args) {
+		Savings s1=new Savings();
+		int a=s1.balance();
+		int b=s1.balance();
+		System.out.println("The total cash in the bank is: "+(a+b));
+	}
+}
+
+
+package Assignmene;
+
+
+abstract class persistence{
+    abstract void persist();
+}
+
+class filePersistence extends persistence{
+    void persist() {
+        System.out.println("file persists");
+    }
+}
+
+class databasePersistence extends persistence{
+    void persist(){
+        System.out.println("database persists");
+    }
+}
+public class ctrl {
+    public static void main(String[] args) {
+        persistence obj= new persistence() {
+            @Override
+            void persist() {
+                System.out.println("calling it");
+            }
+        };
+        obj.persist();
+    }
+}
+
+
+package Assignmene;
+
+public class Draw {
+	public static void main(String[] args) {
+		Line l1=new Line();
+		l1.shape();
+		Rectangle r=new Rectangle();
+		r.shape();
+		
+		
+	}
+
+}
+abstract class shape
+{
+	abstract void shape();
+}
+class Rectangle extends shape
+{
+
+	@Override
+	void shape() {
+		// TODO Auto-generated method stub
+		System.out.println("Draw the rectangle");
+	}
+	
+}
+class Line extends shape
+{
+	void shape() {
+		System.out.println("Draw a line");
+	}
+}
+
+
+package Assignmene;
+class Labour extends Emp
+{
+int overtime=3000;
+	@Override
+	public void salary() {
+		// TODO Auto-generated method stub
+		System.out.println((sal+overtime));
+	}
+	
+}
+class Manager extends Emp
+{
+
+int incentive=2000;
+	@Override
+	public void salary() {
+		// TODO Auto-generated method stub
+		System.out.println((sal+incentive));
+		
+	}
+	
+}
+ abstract class Emp{
+	 int sal=10000;
+  public abstract void salary();
+}
+ class Employeela
+ {
+	 public static void main(String[] args) {
+		Manager m1=new Manager();
+		m1.salary();
+		Labour l1=new Labour();
+		l1.salary();
+	}
+ }
+
+
+
+package Assignmene;
+
+class Gfg {
+
+	private static Gfg single_instance = null;
+
+
+	public String s;
+
+		private Gfg()
+	{
+		s = "Hello I am a string part of Singleton class";
+	}
+	public static Gfg getInstance()
+	{
+		if (single_instance == null)
+			single_instance = new Gfg();
+
+		return single_instance;
+	}
+}
+
+
+class Singleton {
+
+	public static void main(String args[])
+	{
+		Gfg x = Gfg.getInstance();
+
+		Gfg y = Gfg.getInstance();
+
+		Gfg z = Gfg.getInstance();
+
+		
+		System.out.println("Hashcode of x is "
+						+ x.hashCode());
+		System.out.println("Hashcode of y is "
+						+ y.hashCode());
+		System.out.println("Hashcode of z is "
+						+ z.hashCode());
+
+		if (x == y && y == z) {
+
+			System.out.println(
+				"Three objects point to the same memory location on the heap i.e, to the same object");
+		}
+
+		else {
+			System.out.println(
+				"Three objects DO NOT point to the same memory location on the heap");
+		}
+	}
+}

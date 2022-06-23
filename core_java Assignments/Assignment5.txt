@@ -1,0 +1,136 @@
+package Assi;
+
+public class Employee {
+	public Employee(int id, String name, int sal, String dept) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sal = sal;
+		this.dept = dept;
+	}
+	int id;
+	String name;
+	int sal;
+	String dept;
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", sal=" + sal + ", dept=" + dept + "]";
+	}
+	public void displayDetails()
+	{
+		System.out.println("Employee [id=" + id + ", name=" + name + ", sal=" + sal + ", dept=" + dept + "]");
+	}
+    
+
+}
+
+
+package Assi;
+
+import java.util.Date;
+
+public class Pair {
+	public Pair(String string, String string2) {
+		// TODO Auto-generated constructor stub
+	}
+	public Pair() {
+		
+	}
+	@Override
+	public String toString() {
+		return "Pair [key=" + key + ", value=" + value + "]";
+	}
+	public String getKey() {
+		return key;
+	}
+	public void setKey(String key) {
+		this.key = key;
+	}
+	public Date getValue() {
+		return value;
+	}
+	public void setValue(Date date) {
+		this.value = date;
+	}
+	String key;
+	Date value;
+	
+
+}
+
+
+package Assi;
+
+import java.util.HashSet;
+
+import javax.print.attribute.HashAttributeSet;
+
+public class Question1 {
+	public static void main(String[] args) {
+		HashSet<Employee> h=new HashSet<>();
+		Employee a=new Employee(1,"Vivek",30000,"Dev");
+        Employee b=new Employee(2,"Dev",20000,"Q/A");
+        Employee c=new Employee(3,"Aditya",30000,"Dev");
+        Employee d=new Employee(4,"Saurav",50000,"Manager");
+        h.add(a);
+        h.add(b);
+        h.add(c);
+        h.add(d);
+        System.out.println(h);
+	}
+
+}
+
+
+package Assi;
+
+import java.util.HashMap;
+
+public class Question2 {
+	public static void main(String[] args) {
+		HashMap<Integer, Double> h=new HashMap<>();
+		h.put(1, 1.0);
+		h.put(2, 2.0);
+		h.put(3, 3.0);
+		h.put(4, 4.0);
+		System.out.println(h);
+		
+	}
+
+}
+
+
+package Assi;
+
+public class Question3 {
+	public static void exchangePos(int a,int b,int[] arr) {
+	  int temp=arr[a];
+	  arr[a]=arr[b];
+	  arr[b]=temp;
+	 for(int i=0;i<arr.length;i++)
+	 {
+		 System.out.println(arr[i]);
+	 }
+	}
+	public static void main(String[] args) {
+		int[] arr= {1,2,3,4,5,6};
+		exchangePos(2, 4,arr);
+	}
+
+}
+
+
+package Assi;
+
+public class Question4 {
+	public static void main(String[] args) {
+	  Pair p=new Pair();
+//	  p.setKey("1");
+//	  p.setValue("Hello");
+	  Pair p1=new Pair();
+	  p1.setKey("Today is");
+	  p1.setValue(new java.util.Date());
+	  System.out.println(p1);
+	}
+
+}

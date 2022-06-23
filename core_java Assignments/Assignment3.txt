@@ -1,0 +1,120 @@
+package Stringassignment;
+
+public class Concat {
+	public static void main(String[] args) {
+		String s1="Hii";
+		String s2=" How are you";
+		String s3=s1.concat(s2);
+		System.out.println(s3);
+	}
+
+}
+
+
+package Stringassignment;
+
+import java.util.Scanner;
+
+public class lengthofthestring {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.nextLine();
+		System.out.println(s1.length());
+		
+	}
+
+}
+
+package Stringassignment;
+
+public class Question3 {
+	public static void main(String[] args) {
+		String s1="Java String pool refers to collection of Strings which are stored in heap memory";
+		System.out.println(s1.toLowerCase());
+		System.out.println(s1.toUpperCase());
+		String repl=s1.replace('a','e');
+		System.out.println(repl);
+		System.out.println(s1.contains("collection"));
+		System.out.println(s1.equals(repl));
+	}
+
+}
+
+package StringBuffer;
+
+public class Question1 {
+	public static void main(String[] args) {
+		StringBuffer str=new StringBuffer("StringBuffer");
+		StringBuffer str1=new StringBuffer("is the peer class of String");
+		StringBuffer str2=new StringBuffer("that provides much of");
+		StringBuffer str3=new StringBuffer("the fuctionality of Strings");
+		str.append(str1);
+		str.append(str2);
+		str.append(str3);
+		System.out.println(str);
+	}
+
+}
+
+package StringBuffer;
+
+public class Question2 {
+	public static void main(String[] args) {
+		StringBuffer s1=new StringBuffer("It is used to  at the specified index position");
+		StringBuffer s2=new StringBuffer("insert text");
+	     s1.insert(14,s2);
+	     System.out.println(s1);
+	}
+
+}
+
+
+package StringBuffer;
+
+public class Question3 {
+public static void main(String[] args) {
+	StringBuffer s1=new StringBuffer("This method returns the reversed object on which it was called");
+	s1.reverse();
+	System.out.println(s1);
+}
+}
+
+
+package StringBuilder;
+
+public class Question1 {
+	public static void main(String[] args) {
+		StringBuilder s1=new StringBuilder("StringBuilder");
+		StringBuilder s2=new StringBuilder("is a peer class of String");
+		StringBuilder s3=new StringBuilder("that provides much of ");
+		StringBuilder s4=new StringBuilder("the fuctionality of strings");
+		s1.append(s2);
+		s1.append(s3);
+		s1.append(s4);
+		System.out.println(s1);
+	}
+
+}
+
+
+package StringBuilder;
+
+public class Question2 {
+	public static void main(String[] args) {
+		StringBuilder s1=new StringBuilder("It is used at the specified index position");
+		StringBuilder s2=new StringBuilder("insert text");
+		s1.insert(14,s2);
+		System.out.println(s1);
+	}
+
+}
+
+package StringBuilder;
+
+public class Question3 {
+public static void main(String[] args) {
+	StringBuilder s1=new StringBuilder("This method returns the reversed object on which it was called");
+	s1.reverse();
+	System.out.println(s1);
+}
+}
