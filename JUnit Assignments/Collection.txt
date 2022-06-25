@@ -1,0 +1,32 @@
+ArrayList:
+ArrayList and Vector classes implements RandomAccess interface so that any random element we can access with the same speed. 
+Hence ArrayList is the best choice of "retrival operation".
+No method is synchronized
+ArrayList object is not Thread safe.
+
+Vector:
+Every method is synchronized
+Vector object is Thread safe
+
+LinkedList:
+If our frequent operation is retrieval operation then LinkedList is worst choice.
+
+Set interface:
+If we want to represent a group of individual objects as a single entity where duplicates are not allow and insertion order is 
+not preserved then we should go for Set interface.
+
+HashSet:
+HashSet is best suitable, if our frequent operation is "Search".
+
+LinkedHashSet is exactly same as HashSet except the following differences
+Insertion order is preserved
+The underlying data structure is a combination of LinkedList and Hashtable.
+
+SortedSet:
+If we want to represent a group of "unique objects" where duplicates are not allowed and all objects must be inserting according 
+to some sorting order then we should go for SortedSet interface.
+That sorting order can be either default natural sorting (or) customized sorting order.
+
+TreeSet:
+Insertion order is not preserved and it is based on some sorting order of objects.
+Heterogeneous objects are not allowed if we are trying to insert heterogeneous objects then we will get ClassCastException.

@@ -1,0 +1,26 @@
+parse==What is parse in react JS?
+parse() The JSON. parse() method parses a JSON string, constructing the JavaScript value or object described by the string. 
+An optional reviver function can be provided to perform a transformation on the resulting object before it is returned
+
+format==Your code - format(new Date("10-13-20"), 'MM-DD-YY') is format step, try convert a date object to a string with 
+format template is MM-DD-YY .
+
+Useparams==In our React app sometimes we want to access the parameters of the current route in this case useParams hook comes into action. 
+The react-router-dom package has useParams hooks that let you access the parameters of the current route.
+
+Toast==Push notifications to your visitors with a toast, a lightweight and easily customizable alert message. React toasts are lightweight notifications designed to 
+mimic the push notifications that have been popularized by mobile and desktop operating systems.
+
+Then()==The then() method in JavaScript has been defined in the Promise API and is used to deal with asynchronous tasks such as an API call. Previously, 
+callback functions were used instead of this function which made the code difficult to maintain.
+
+preventDefault()==The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs 
+to the event will not occur.
+
+For example, this can be useful when:
+
+Clicking on a "Submit" button, prevent it from submitting a form
+Clicking on a link, prevent the link from following the URL
+
+Append()==The Element.append() method inserts a set of Node objects or string objects after the last child of the Element. 
+String objects are inserted as equivalent Text nodes.
