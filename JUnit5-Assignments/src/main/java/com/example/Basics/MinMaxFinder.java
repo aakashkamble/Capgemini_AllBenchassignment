@@ -1,3 +1,5 @@
+package com.example.Basics;
+
 import java.util.Arrays;
 
 public class MinMaxFinder {
@@ -19,3 +21,4 @@ public class MinMaxFinder {
         return ret;
     }
 }
+

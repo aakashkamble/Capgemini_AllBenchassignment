@@ -1,3 +1,5 @@
+package com.example.Basics;
+
 public class MinMaxObj {
     public static void main(String[] args) {
         int[] input={56,34,7,3,54,3,34,34,53};
